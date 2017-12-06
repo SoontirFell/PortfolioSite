@@ -1,0 +1,18 @@
+Desirable attributes
+    General
+        No libraries or frameworks
+        Mobile Responsive
+        CSS Grid
+        Floating Header (nth)
+        CSS animations (nth)
+    Content
+        Values
+        Professional Background
+        Projects
+            Self-contained pages for each project (nth, need PlaylistRx to function as a web page first)
+        PDF of Resume
+        Contact Info
+            Email
+            Github
+            LinkedIn
+        Big pretty images on rotation (nth)
