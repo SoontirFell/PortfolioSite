@@ -1,3 +1,12 @@
+/*
+Color Palette
+Royal Blue (links): #005ECC
+Heather Blue: #4C6F99
+Vibrant Blue: #05FCFF
+Vibrant Orange: #FF3B00
+Ligh Red: #CC2718
+*/
+
 /* Grids */
 
 .contentGrid {
@@ -7,6 +16,7 @@
 .headerGrid {
     border-bottom: 1px solid black;
     display: inline-grid;
+    height: 127px;
     grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 10px;
 }
@@ -18,15 +28,17 @@
 
 .header2 {
     grid-column: 3;
-    text-align: right;
+    position: relative;
+    right: 20px;
 }
 
-.header3 {
-    grid-column: 4;
-}
-
-.header2, .header3 {
+.contactLinksGrid {
+    bottom: 0;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
     font: 16px serif;
+    position: absolute;
 }
 
 .footerGrid {
@@ -46,6 +58,16 @@
 }
 
 .pageTitle {
+    color: #FF3B00;
     font: 64px 'Arizonia', serif;
 }
 
+/* Tags */
+
+a {
+    color: #005ECC;
+}
+
+h1 {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
