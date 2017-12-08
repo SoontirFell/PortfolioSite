@@ -1,10 +1,8 @@
 /*
 Color Palette
-Royal Blue (links): #005ECC
-Heather Blue: #4C6F99
-Vibrant Blue: #05FCFF
-Vibrant Orange: #FF3B00
-Ligh Red: #CC2718
+Link Blue: #005ECC
+Background Blue: #D2F2FF
+Logo Orange: #FF3B00
 */
 
 /* Grids */
@@ -55,7 +53,6 @@ Ligh Red: #CC2718
 }
 
 /* Single Classes */
-
 .email {
     margin-top:20px
 }
@@ -74,9 +71,24 @@ Ligh Red: #CC2718
     width: 48px;
 }
 
+.mainContent {
+    background-color: white;
+    margin-top:5px;
+}
+
+.mainContent * {
+    margin:5px;
+}
+
 .pageTitle {
     color: #FF3B00;
     font: 64px 'Arizonia', serif;
+}
+
+.values {
+    color: #000F4C;
+    font: 24px 'Merienda One', serif;
+    text-align: center;
 }
 
 /* Misc */
@@ -88,8 +100,16 @@ a img {
 
 /* Tags */
 
-a {
-    color: #005ECC;
+a:link {
+    color: #0033FF;
+}
+
+a:visited {
+    color: #0024B2;
+}
+
+body {
+    background-color: #EBECF0;
 }
 
 h1 {
