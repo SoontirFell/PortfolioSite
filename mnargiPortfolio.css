@@ -14,7 +14,7 @@ Ligh Red: #CC2718
 }
 
 .headerGrid {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     display: inline-grid;
     height: 127px;
     grid-template-columns: 2fr 1fr 1fr;
@@ -30,13 +30,16 @@ Ligh Red: #CC2718
     grid-column: 3;
     position: relative;
     right: 20px;
+    min-width: 400px;
 }
 
 .contactLinksGrid {
     bottom: 0;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
+    margin-right: 25%;
+    margin-left: 25%;
     font: 16px serif;
     position: absolute;
 }
@@ -53,13 +56,34 @@ Ligh Red: #CC2718
 
 /* Single Classes */
 
+.email {
+    margin-top:20px
+}
+
 .headerGrid div * {
     margin-bottom: 5px;
+}
+
+.githubLogo {
+    height: 40px;
+    width: 40px;
+}
+
+.linkedinLogo {
+    height: 48px;
+    width: 48px;
 }
 
 .pageTitle {
     color: #FF3B00;
     font: 64px 'Arizonia', serif;
+}
+
+/* Misc */
+
+a img {
+    max-height: 100%;
+    max-width: 100%;
 }
 
 /* Tags */

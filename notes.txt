@@ -3,7 +3,7 @@ Desirable attributes
         No libraries or frameworks
         Mobile Responsive
         CSS Grid
-        Floating Header (nth)
+        Media Queries
         CSS animations (nth)
     Content
         Values
