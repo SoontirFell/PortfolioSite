@@ -16,7 +16,7 @@ Logo Orange: #FF3B00
     display: inline-grid;
     height: 127px;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 12px;
 }
 
 .header1 {
@@ -35,15 +35,23 @@ Logo Orange: #FF3B00
     bottom: 0;
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    margin-right: 25%;
-    margin-left: 25%;
+    grid-gap: 12px;
+    margin: 0 24%;
     font: 16px serif;
     position: absolute;
+    width: 275px;
 }
 
 .footerGrid {
     display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 12px;
+    font: 16px serif;
+    margin: 4px auto;
+}
+
+.footerContent {
+
 }
 
 /* Utilities */
@@ -58,7 +66,7 @@ Logo Orange: #FF3B00
 }
 
 .headerGrid div * {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .githubLogo {
@@ -73,11 +81,11 @@ Logo Orange: #FF3B00
 
 .mainContent {
     background-color: white;
-    margin-top:5px;
+    margin-top:4px;
 }
 
 .mainContent * {
-    margin:5px;
+    margin:4px;
 }
 
 .pageTitle {
@@ -91,12 +99,14 @@ Logo Orange: #FF3B00
     text-align: center;
 }
 
+
 /* Misc */
 
 a img {
     max-height: 100%;
     max-width: 100%;
 }
+
 
 /* Tags */
 
