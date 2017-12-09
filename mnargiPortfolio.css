@@ -77,9 +77,10 @@ Logo Orange: #FF3B00
     display: inline-grid;
     grid-column: 3;
     grid-gap: 12px;
-    grid-template-columns: 180px 1fr 25px;
+    grid-template-columns: 10fr 50fr 1fr;
     grid-template-rows: 30px 1fr 25px 30px;
     grid-row: 4;
+    padding-bottom: 8px;
 }
 
 .contactFormTitle {
@@ -91,6 +92,8 @@ Logo Orange: #FF3B00
 .contactFormX {
     grid-column:3;
     grid-row: 1;
+    text-align: right;
+    padding-right: 4px;
 }
 
 .sendersMessageLabel {
@@ -111,7 +114,7 @@ Logo Orange: #FF3B00
 .senderEmail {
     grid-column: 2;
     grid-row: 3;
-    max-width: 300px;
+    max-width: 256px;
 }
 
 .sendEmail {
@@ -206,6 +209,7 @@ section p {
 
 textarea, input[type=email] {
     font: 16px serif;
+    resize: none;
 }
 
 /* Utilities */
