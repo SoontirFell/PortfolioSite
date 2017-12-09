@@ -1,0 +1,6 @@
+event.target = element that was clicked
+event.currentTarget = element w/ event handler
+
+Clean break even language
+Style
+  Center headers

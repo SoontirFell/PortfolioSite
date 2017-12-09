@@ -1,0 +1,119 @@
+/* Tags */
+h1 {
+    margin-bottom: -20px;
+}
+
+h3 {
+    font-style: italic
+}
+
+h4, h5  {
+    margin-bottom: 0px;
+    text-align: center;
+    width:200px;
+}
+
+label {
+    display: inline-block;
+    font-size: 14px;
+    left:150px;
+    position:relative;
+    width:95px;
+}
+
+div {
+    width:500px;
+}
+
+input {
+    width:200px;
+}
+
+/* Styles */
+.bodyStyle div{
+    margin-bottom: -10px;
+}
+
+.headerStyle {
+    font-family: sans-serif
+}
+
+.formStyle {
+    margin-left: 28px;
+    width:272px;
+}
+
+.formFiltersStyle {
+    margin:-15px 0px -10px 0px;
+    width:272px;
+}
+
+.formFiltersStyle input{
+    display: inline-block;
+    left:150px;
+    margin:0px;
+    position:relative;
+    vertical-align: middle;
+    width:15px;
+}
+
+.eqStyle p{
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.eqStyle span {
+    font-style: italic;
+    padding: 5px;
+}
+
+.eqStyle span:hover {
+    text-decoration: underline;
+    text-shadow: -.5px 0px black;
+}
+
+.tsptStyle {
+    color:dodgerblue;
+    cursor: pointer;
+}
+
+.rStyle {
+    color:orange;
+    cursor: pointer;
+}
+
+.stStyle {
+    color:rebeccapurple;
+    cursor: pointer;
+}
+
+.timeLostStyle {
+    color:red;
+    cursor: pointer;
+}
+
+.timeSavedStyle {
+    color:forestgreen;
+    cursor: pointer;
+}
+
+.footerStyle {
+    font-size: 12px;
+    width:256px;
+}
+
+
+/* Utilities */
+.hidden {
+    display:none;
+}
+
+.selected {
+    text-decoration: underline;
+    text-shadow: -.5px 0px black;
+}
+
+.smallInput {
+    width:30px;
+}

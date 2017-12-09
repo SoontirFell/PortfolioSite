@@ -1,10 +1,12 @@
 Desirable attributes
     General
-        No libraries or frameworks
-        Mobile Responsive
-        CSS Grid
+        Contact form modal
+            hide/unhide
+            send Email
+            notify of success or failure
+            replace x
         Media Queries
-        CSS animations (nth)
+        CSS animations
     Content
         Values
         Professional Background

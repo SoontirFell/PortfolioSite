@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport"  />
+        
+        <title>Automatrix</title>
+        <link href="Automatrix.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container" class="bodyStyle">
+            <div id="header" class="headerStyle">
+                <h1>Automatrix</h1>
+                <h3>How much time can you save?</h3>
+            </div>
+            
+            <!--Below is the guiding formula-->
+                
+            <div id="eqContainer" class="eqStyle">
+                <p id="eqTimeSavedPer" class="">(<span id="tspt" class="tsptStyle selected">TSpT</span> </p>
+                
+                <p id="eqTaskReps"  class="">* <span id="r" class="rStyle">R</span>)  -</p> 
+
+                <p id="eqSetupTime"  class=""><span id="st" class="stStyle">ST</span> </p>
+
+                <p id="eqTimeSaved"  class="">= <span id="ts" class="timeSavedStyle">Time Saved</span></p>
+            </div>
+            
+            <div id="formContainer" class="formStyle">
+                    <form id="formFilters" class="formFiltersStyle">
+                        <input id="subCalcToggle" name="subCalcToggle" type="checkbox">
+                        <label> Sub-Calculators</label>
+                    </form>
+                
+                    <form id="calcForm" name="calcForm">
+                    <div id="timeSavedPerTaskContainer" class="">
+                        <h4 class="tsptStyle">Time Saved per Task</h4>
+                        <input id="timeSavedPer" type="number" name="savedPerTime">
+                        <br />
+                        <input id="timeSavedPerMargin" class="smallInput" maxlength="4" type="number" name="savedPerTimeMargin" min="0"> % |
+                        <select id="timeSavedPerUnits" name="timeSavedPerUnits">
+                            <option>Seconds</option>
+                            <option selected="selected">Minutes</option>
+                            <option>Hours</option>
+                            <option>Days</option>
+                            <option>Weeks</option>
+                            <option>Years</option>
+                        </select>
+                        
+                        <div id="timeSavedPerCalculator"  class="subCalculator hidden">
+                            <div id="timeWOAutoContainer">
+                                <h5>Task Time w/o Automation</h5>
+                                <input id="timeWOAutomation" type="number" name="timeWOAutomation">
+                                <br />
+                                <input id="timeWOAutomationMargin" class="smallInput" maxlength="4" type="number" name="timeWOAutomationMargin" min="0"> % |
+                                <select id="timeWOAutomationUnits" name="timeWAutomationUnits">
+                                    <option>Seconds</option>
+                                    <option selected="selected">Minutes</option>
+                                    <option>Hours</option>
+                                    <option>Days</option>
+                                    <option>Weeks</option>
+                                    <option>Years</option>
+                                </select>
+                            </div>
+
+                            <div id="timeWAutoContainer">
+                                <h5>Task Time w/ Automation</h5>
+                                <input id="timeWAutomation" type="number" name="timeWAutomation">
+                                <br />
+                                <input id="timeWAutomationMargin" class="smallInput" maxlength="4" type="number" name="timeWAutomationMargin" min="0"> % |
+                                <select id="timeWAutomationUnits" name="timeWOAutomationUnits">
+                                    <option>Seconds</option>
+                                    <option selected="selected">Minutes</option>
+                                    <option>Hours</option>
+                                    <option>Days</option>
+                                    <option>Weeks</option>
+                                    <option>Years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="taskRepsContainer" class="hidden">
+                        <h4 class="rStyle">Number of Repetitions</h4>
+                        <input id="taskReps" type="number" name="taskReps">
+                        <br />
+                        <input id="taskRepsMargin" class="smallInput" maxlength="4"  type="number" name="repetitionMargin"> %
+                        
+                        <div id="tasRepsCalculator" class="subCalculator hidden">
+                            <div id="taskFrequencyContainer">
+                                <h5>Task Frequency</h5>
+                                <input id="taskFrequency" type="number" name="taskFrequency">
+                                <br />
+                                <input id="taskFrequencyMargin" class="smallInput" maxlength="4" type="number" name="setupTimeMargin" min="0"> % |
+                                per <select id="taskFrequencyUnits" name="taskFrequencyUnits">
+                                    <option>Second</option>
+                                    <option selected="selected">Minute</option>
+                                    <option>Hour</option>
+                                    <option>Day</option>
+                                    <option>Week</option>
+                                    <option>Year</option>
+                                </select>
+                            </div>
+
+                            <div id="taskDurationContainer" >
+                                <h5>Task Duration</h5>
+                                <input id="taskDuration" type="number" name="taskDuration">
+                                <br />
+                                <input id="taskDurationMargin" class="smallInput" maxlength="4" type="number" name="setupTimeMargin" min="0"> % |
+                                <select id="taskDurationUnits" name="taskDurationUnits">
+                                    <option>Seconds</option>
+                                    <option selected="selected">Minutes</option>
+                                    <option>Hours</option>
+                                    <option>Days</option>
+                                    <option>Weeks</option>
+                                    <option>Years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="setupTimeContainer" class="hidden">
+                        <h4 class="stStyle">Setup Time</h4>
+                        <input id="setupTime" type="number" name="setupTime">
+                        <br />
+                        <input id="setupTimeMargin" class="smallInput" maxlength="4" type="number" name="setupTimeMargin" min="0"> % |
+                        <select id="setupTimeUnits" name="setupTimeUnits">
+                            <option>Seconds</option>
+                            <option selected="selected">Minutes</option>
+                            <option>Hours</option>
+                            <option>Days</option>
+                            <option>Weeks</option>
+                            <option>Years</option>
+                        </select>
+                    </div>
+                    
+                    <div id="timeSavedContainer" class="hidden">
+                        <h4 class="timeSavedStyle">Time Saved</h4>
+                        <input id="timeSaved" type="text" name="timeSaved" value="" disabled>
+                        <br />
+                        <input id="timeSavedMargin" class="smallInput" maxlength="4" type="number" name="timeSavedMargin" value="" disabled min="0"> % Error |
+                        <select id="timeSavedUnits" name="timeSavedUnits">
+                            <option>Seconds</option>
+                            <option selected="selected">Minutes</option>
+                            <option>Hours</option>
+                            <option>Days</option>
+                            <option>Weeks</option>
+                            <option>Years</option>
+                        </select>
+                        
+                        <div id="breakEvenContainer" class="">
+                            <h4>Reps to Break Even</h4>
+                            <input id="breakEvenReps" type="text" name="breakEvenReps" disabled>
+                        </div>
+                    </div>       
+                </form>
+            </div>
+            <br />
+            <br />
+            <div id="foooter" class="footerStyle">
+                <p>
+                    Inspired by <a href="https://xkcd.com/1205/">XKCD 1205</a>. Just like the comic this is a tool intended to help you decide if automation is worthwhile.
+                </p>
+                <p>
+                    All days are considered to be full, 24 hour days.
+                </p>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="Automatrix.js" ></script>
+    </body>
+</html>

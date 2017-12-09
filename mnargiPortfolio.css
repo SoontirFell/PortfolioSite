@@ -5,18 +5,30 @@ Background Blue: #D2F2FF
 Logo Orange: #FF3B00
 */
 
+/* Combos */
+.contactFormGrid label {
+    margin-left: 16px;
+}
+
+.projectSection h4:not(:first-of-type) {
+    margin: 32px 16px 16px 16px;
+}
+
+
 /* Grids */
 
-.contentGrid {
+.mainContentGrid {
+    background-color: white;
+    border: 1px solid black;
     display: inline-grid;
+    margin-top:4px;
 }
 
 .headerGrid {
-    border-bottom: 2px solid black;
     display: inline-grid;
-    height: 127px;
-    grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 12px;
+    grid-template-columns: 2fr 1fr 1fr;
+    height: 127px;
 }
 
 .header1 {
@@ -34,18 +46,18 @@ Logo Orange: #FF3B00
 .contactLinksGrid {
     bottom: 0;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 12px;
-    margin: 0 24%;
+    grid-template-columns: 1fr 1fr 1fr;
     font: 16px serif;
     position: absolute;
-    width: 275px;
+    right: 0;
+    width: 175px;
 }
 
 .footerGrid {
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
     font: 16px serif;
     margin: 4px auto;
 }
@@ -53,16 +65,60 @@ Logo Orange: #FF3B00
 .footerContentGrid {
     display: inline-grid;
     grid-column: 2;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 20px 24% 0 24%;
+    width: 175px;
 }
 
-/* Utilities */
-
-.alwaysFullWidth {
-    width: 100%;
+.contactFormGrid {
+    background-color: white;
+    border: 1px solid black;
+    display: inline-grid;
+    grid-column: 3;
+    grid-gap: 12px;
+    grid-template-columns: 180px 1fr 25px;
+    grid-template-rows: 30px 1fr 25px 30px;
+    grid-row: 4;
 }
+
+.contactFormTitle {
+    grid-column: span 2;
+    grid-row: 1;
+    margin: 2px 0px 0px 16px;
+}
+
+.contactFormX {
+    grid-column:3;
+    grid-row: 1;
+}
+
+.sendersMessageLabel {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.sendersMessage {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.senderEmailLabel {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.senderEmail {
+    grid-column: 2;
+    grid-row: 3;
+    max-width: 300px;
+}
+
+.sendEmail {
+    grid-column: 2;
+    grid-row: 4;
+}
+
 
 /* Single Classes */
 .emailHeader {
@@ -71,6 +127,12 @@ Logo Orange: #FF3B00
 
 .emailFooter {
     margin-top:8px
+}
+
+.emailIcon {
+    cursor: pointer;
+    height: 48px;
+    width:48px;
 }
 
 .headerGrid div * {
@@ -87,15 +149,6 @@ Logo Orange: #FF3B00
     width: 48px;
 }
 
-.mainContent {
-    background-color: white;
-    margin-top:4px;
-}
-
-.mainContent section {
-    margin:4px;
-}
-
 .pageTitle {
     color: #FF3B00;
     font: 64px 'Arizonia', serif;
@@ -107,9 +160,6 @@ Logo Orange: #FF3B00
     margin: 16px 8px 8px 16px;
     text-align: center;
 }
-
-
-/* Misc */
 
 
 /* Tags */
@@ -131,6 +181,11 @@ body {
     background-color: #EBECF0;
 }
 
+button {
+    height: 30px;
+    width:100px;
+}
+
 h1 {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -138,14 +193,35 @@ h1 {
 h4 {
     color: #000F4C;
     font: 24px 'Merienda One', serif;
-    margin: 8px;
 }
 
-section h4 a {
-    font: 24px 'Merienda One', serif;
+section h4 {
+    margin: 16px;
 }
 
 section p {
     font: 16px serif;
-    margin: 16px 8px;
+    margin: 16px;
+}
+
+textarea, input[type=email] {
+    font: 16px serif;
+}
+
+/* Utilities */
+
+.alwaysFullWidth {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 630px) {
+    .pageTitle {
+        font-size: 32px;
+    }
 }

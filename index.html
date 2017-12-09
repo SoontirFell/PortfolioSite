@@ -18,9 +18,7 @@
             </div>
             <div id="header2" class="header2">
                 <div id="contactLinksGrid" class="contactLinksGrid">
-                    <h3 id="emailHeader" class="emailHeader">
-                        <a href="mailto:mnargi3@gmail.com">mnargi3@gmail.com</a>
-                    </h3>
+                    <img id="emailIconHeader" class="emailIcon" src="/imgs/email.png" />
                     <a id="githubLogoHeader" class="githubLogo" href="https://github.com/SoontirFell" target="_blank">
                         <img src="/imgs/GitHub.png" />
                     </a>
@@ -30,13 +28,32 @@
                 </div>
             </div>
         </header>
-        <div id="mainContent" class="mainContent contentGrid">
+        <div id="contactFormGrid" class="contactFormGrid alwaysFullWidth">
+            <h4 id="contactFormTitle" class="contactFormTitle" title="Ok, it's a drop down, but they're more mobile friendly">
+                Start a Dialogue
+            </h4>
+            <span id="contactFormX" class="contactFormX">
+                X
+            </span>
+            <label for="sendersMessage" class="sendersMessageLabel">
+                Your Message*
+            </label>
+            <textarea id="sendersMessage" class="sendersMessage" name="sendersMessage"  placeholder="Your message" required="required" maxlength="1024" rows="5"></textarea>
+            <label for="senderEmail" class="senderEmailLabel">
+                Your Email Address*
+            </label>
+            <input id="senderEmail" class="senderEmail" name="senderEmail" placeholder="Your email address"  required="required" type="email">
+            <button id="sendEmail" class="sendEmail" name="sendEmail" title="Send email" value="sendEmail">
+                Send Email
+            </button>
+        </div>
+        <div id="mainContentGrid" class="mainContentGrid alwaysFullWidth">
             <section id="valueSection" class="valueSection" title="Values">
                 <p id="values" class="values">Integrity ~ Honesty ~ Diligence ~ Respect</p>
             </section>
             <section id="goalSection" class="goalSection" title="Goals">
                 <h4>Goals</h4>
-                <p>I want to create custom solutions to address client needs while furthering my understanding of computer science, user experience, and business.</p>
+                <p>Create custom solutions to address client needs while furthering my understanding of computer science, user experience, and business.</p>
             </section>
             <section id="backgroundSection" class="backgroundSection" title="Background">
                 <h4>My Background</h4>
@@ -45,32 +62,36 @@
                 </p>
             </section>
             <section id="resumeSection" class="resumeSection" title="Resume">
-                    <h4>
-                        <a href="/M. Nargi Resume - 20171205.pdf" target="_blank">My Résumé</a>
-                    </h4>
-                </section>
+                <h4>
+                    <a href="/M. Nargi Resume - 20171205.pdf" target="_blank">My Résumé</a>
+                </h4>
+            </section>
             <section id="projectSection" class="projectSection" title="Projects">
-                <h4>Automatrix</h4>
+                <h4>
+                    <a href="https://github.com/SoontirFell/Automatrix" target="_blank">Automatrix </a>
+                    -
+                    <a href="/automatrix-master/index.html" target="_blank"> Demo</a>
+                </h4>
                 <p>
                     Automatrix is a an automation efficiency calculator, loosely based on <a href="https://xkcd.com/1205/" target="_blank">XKCD 1205</a>.
 
                     Users can determine if automating a task will save them time based on their estimates of how long the process will take. The formula is made clearly visible to the user and supports sub-calculators to aid in estimation of key variables. Moreover the user has full control over the units of estimation and can even include margins of error, which factor into the outcome, if they desire to.
                 </p>
-                <h4>PlaylistRx</h4>
+                <h4><a href="https://github.com/SoontirFell/PlaylistRx" target="_blank">PlaylistRx</a></h4>
                 <p>
                     As a music lover and avid Redditor I find a lot of new songs on any number of subreddits. I frequently save these songs using Reddit's built in save feature so that I can go back and listen to them at a more convenient time. PlaylistRx is a tool built to support this habit.
-
+                </p>
+                <p>
                     With a user's permission PlaylistRx uses OAuth2 to grab all of their saved Spotify and YouTube links and drop them into a table. The user can then choose which songs they wish to save to a Spotify and/or YouTube playlist at the press of the button. When finished the user can also choose to unsave the same or a different set of songs/links from their Reddit saved list.
-
-                    PlaylistRx was originall designed as FireFox WebExtension, but is currently being updated to operate as a stand-alone web page. The original WebExtension was never published, but can be used as a temporary extension. If you'd like to do so download the <a href="https://github.com/SoontirFell/PlaylistRx" target="_blank">GitHub repository</a> and follow <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox" target="_blank">Mozilla's instructions</a> on setting up a temporary extension.
+                </p>
+                <p>
+                    PlaylistRx was originall designed as FireFox WebExtension, but is currently being updated to operate as a stand-alone web page. The original WebExtension was never published, but can be used as a temporary extension. If you'd like to do so download the GitHub repository using the link above and follow <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox" target="_blank">Mozilla's instructions</a> on setting up a temporary extension.
                 </p>
             </section>
         </div>
         <footer id="footer" class="footerGrid alwaysFullWidth">
             <div id="footerContent" class="footerContentGrid">
-                <h3 id="emailFooter" class="emailFooter">
-                    <a href="mailto:mnargi3@gmail.com">mnargi3@gmail.com</a>
-                </h3>
+                <img id="emailIconFooter" class="emailIcon" src="/imgs/email.png" />
                 <a id="githubLogoFooter" class="githubLogo" href="https://github.com/SoontirFell" target="_blank">
                     <img src="/imgs/GitHub.png" />
                 </a>
