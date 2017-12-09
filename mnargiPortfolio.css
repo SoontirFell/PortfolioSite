@@ -5,6 +5,25 @@ Background Blue: #D2F2FF
 Logo Orange: #FF3B00
 */
 
+/* Animations */
+
+.slideIn {
+    border-width: 1px;
+    max-height: 256px;
+    padding-bottom: 8px;
+}
+
+.slideOut {
+    border-width: 0px;
+    max-height: 0;
+}
+
+.slideIn, .slideOut {
+    overflow-y: hidden;
+    transition: max-height 0.4s ease-in-out, border-width 0.4s ease-in-out;
+}
+
+
 /* Combos */
 .contactFormGrid label {
     margin-left: 16px;
@@ -73,14 +92,14 @@ Logo Orange: #FF3B00
 
 .contactFormGrid {
     background-color: white;
-    border: 1px solid black;
+    border-color: black;
+    border-style: solid;
     display: inline-grid;
     grid-column: 3;
     grid-gap: 12px;
     grid-template-columns: 10fr 50fr 1fr;
     grid-template-rows: 30px 1fr 25px 30px;
     grid-row: 4;
-    padding-bottom: 8px;
 }
 
 .contactFormTitle {
