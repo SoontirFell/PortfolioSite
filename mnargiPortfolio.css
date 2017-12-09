@@ -50,8 +50,12 @@ Logo Orange: #FF3B00
     margin: 4px auto;
 }
 
-.footerContent {
-
+.footerContentGrid {
+    display: inline-grid;
+    grid-column: 2;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 12px;
+    margin: 20px 24% 0 24%;
 }
 
 /* Utilities */
@@ -61,8 +65,12 @@ Logo Orange: #FF3B00
 }
 
 /* Single Classes */
-.email {
+.emailHeader {
     margin-top:20px
+}
+
+.emailFooter {
+    margin-top:8px
 }
 
 .headerGrid div * {
@@ -84,7 +92,7 @@ Logo Orange: #FF3B00
     margin-top:4px;
 }
 
-.mainContent * {
+.mainContent section {
     margin:4px;
 }
 
@@ -95,20 +103,21 @@ Logo Orange: #FF3B00
 
 .values {
     color: #000F4C;
-    font: 24px 'Merienda One', serif;
+    font: 32px 'Merienda One', serif;
+    margin: 16px 8px 8px 16px;
     text-align: center;
 }
 
 
 /* Misc */
 
+
+/* Tags */
+
 a img {
     max-height: 100%;
     max-width: 100%;
 }
-
-
-/* Tags */
 
 a:link {
     color: #0033FF;
@@ -124,4 +133,19 @@ body {
 
 h1 {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h4 {
+    color: #000F4C;
+    font: 24px 'Merienda One', serif;
+    margin: 8px;
+}
+
+section h4 a {
+    font: 24px 'Merienda One', serif;
+}
+
+section p {
+    font: 16px serif;
+    margin: 16px 8px;
 }
