@@ -8,17 +8,18 @@
     <link href="mnargiPortfolio.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type='text/css'>
 </head>
 
 <body>
-    <div id="pageContainer" class="pageContainer alwaysFullWidth">
-        <header id="header" class="headerGrid alwaysFullWidth">
+    <div id="pageContainer" class="pageContainer">
+        <header id="header" class="headerGrid">
             <div id="header1" class="header1">
                 <h1 id="pageTitle" class="pageTitle" title="mNargi3">mNargi3</h1>
             </div>
             <div id="header2" class="header2">
                 <div id="contactLinksGrid" class="contactLinksGrid">
-                    <img id="emailIconHeader" class="emailIcon" src="/imgs/email.png" title="Email Me"/>
+                    <img id="emailIconHeader" class="emailIcon" src="/imgs/email.png" title="Email Me" />
                     <a id="githubLogoHeader" class="githubLogo" href="https://github.com/SoontirFell" target="_blank" title="My GitHub">
                         <img src="/imgs/GitHub.png" />
                     </a>
@@ -28,7 +29,7 @@
                 </div>
             </div>
         </header>
-        <div id="contactFormGrid" class="contactFormGrid alwaysFullWidth slideOut">
+        <div id="contactFormGrid" class="contactFormGrid slideOut">
             <h4 id="contactFormTitle" class="contactFormTitle" title="Ok, it's a drop down, but they're more mobile friendly">
                 Start a Dialogue
             </h4>
@@ -38,18 +39,18 @@
             <label for="sendersMessage" class="sendersMessageLabel">
                 Your Message*
             </label>
-            <textarea id="sendersMessage" class="sendersMessage" name="sendersMessage"  placeholder="Your message" required="required" maxlength="1024" rows="5"></textarea>
+            <textarea id="sendersMessage" class="sendersMessage" name="sendersMessage"  placeholder="What would you like to discuss?" required="required" maxlength="1024" rows="5"></textarea>
             <label for="senderEmail" class="senderEmailLabel">
                 Your Email Address*
             </label>
-            <input id="senderEmail" class="senderEmail" name="senderEmail" placeholder="Your email address"  required="required" type="email">
+            <input id="senderEmail" class="senderEmail" name="senderEmail" placeholder="yourEmail@gmail.com"  required="required" type="email">
             <button id="sendEmail" class="sendEmail" name="sendEmail" title="Send email" value="sendEmail">
                 Send Email
             </button>
         </div>
-        <div id="mainContentGrid" class="mainContentGrid alwaysFullWidth">
+        <div id="mainContentGrid" class="mainContentGrid">
             <section id="valueSection" class="valueSection" title="Values">
-                <p id="values" class="values">Integrity ~ Honesty ~ Diligence ~ Respect</p>
+                <p id="values" class="values"><strong>Integrity &bull; Honesty &bull; Diligence &bull; Respect</strong></p>
             </section>
             <section id="goalSection" class="goalSection" title="Goals">
                 <h4>Goals</h4>
@@ -63,7 +64,7 @@
             </section>
             <section id="resumeSection" class="resumeSection" title="Resume">
                 <h4>
-                    <a href="/M. Nargi Resume - 20171205.pdf" target="_blank">My Résumé</a>
+                    <a href="/M. Nargi Resume - 20171210.pdf" target="_blank">My Résumé</a>
                 </h4>
             </section>
             <section id="projectSection" class="projectSection" title="Projects">
@@ -89,15 +90,9 @@
                 </p>
             </section>
         </div>
-        <footer id="footer" class="footerGrid alwaysFullWidth">
-            <div id="footerContent" class="footerContentGrid">
-                <img id="emailIconFooter" class="emailIcon" src="/imgs/email.png" title="Email Me"/>
-                <a id="githubLogoFooter" class="githubLogo" href="https://github.com/SoontirFell" target="_blank" title="My GitHub">
-                    <img src="/imgs/GitHub.png" />
-                </a>
-                <a id="linkedinLogoFooter" class="linkedinLogo" href="https://www.linkedin.com/in/mnargi3" target="_blank" title="My LinkedIn">
-                    <img src="/imgs/LinkedIn.png" />
-                </a>
+        <footer id="footer" class="footer">
+            <div id="footerContent" class="footerContent">
+                <img id="footerBadges" class="footerBadges" src="imgs/badge_53S.png" title="Built on HTML5, CSS3, and Javascript">
             </div>
         </footer>
     </div>

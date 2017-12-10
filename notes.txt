@@ -1,18 +1,5 @@
 Desirable attributes
     General
         Contact form modal
-            Fix resposne error "SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data"
             replace x
         Media Queries
-        CSS animations
-    Content
-        Values
-        Professional Background
-        Projects
-            Self-contained pages for each project (nth, need PlaylistRx to function as a web page first)
-        PDF of Resume
-        Contact Info
-            Email
-            Github
-            LinkedIn
-        Big pretty images on rotation (nth)

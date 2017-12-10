@@ -82,6 +82,8 @@ contactForm = (function () {
         if (currentlyHidden) {
             contactFormGrid.classList.remove('slideOut');
             contactFormGrid.classList.add('slideIn');
+            document.getElementById('sendersMessage').focus();
+            window.scrollTo(0, 0);
         } else {
             contactFormGrid.classList.remove('slideIn');
             contactFormGrid.classList.add('slideOut');
@@ -95,6 +97,5 @@ contactForm = (function () {
 })();
 
 document.getElementById('emailIconHeader').addEventListener('click', contactForm.toggleDisplay);
-document.getElementById('emailIconFooter').addEventListener('click', contactForm.toggleDisplay);
 document.getElementById('contactFormX').addEventListener('click', contactForm.toggleDisplay);
 document.getElementById('sendEmail').addEventListener('click', contactForm.checkMessage);

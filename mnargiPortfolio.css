@@ -8,25 +8,29 @@ Logo Orange: #FF3B00
 /* Animations */
 
 .slideIn {
-    border-width: 1px;
     max-height: 256px;
+    outline-width: 1px;
     padding-bottom: 8px;
 }
 
 .slideOut {
-    border-width: 0px;
     max-height: 0;
+    outline-width: 0px;
 }
 
 .slideIn, .slideOut {
     overflow-y: hidden;
-    transition: max-height 0.4s ease-in-out, border-width 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out, outline-width 0.4s ease-in-out;
 }
 
 
 /* Combos */
 .contactFormGrid label {
     margin-left: 16px;
+}
+
+.headerGrid div * {
+    margin-bottom: 4px;
 }
 
 .projectSection h4:not(:first-of-type) {
@@ -38,28 +42,34 @@ Logo Orange: #FF3B00
 
 .mainContentGrid {
     background-color: white;
-    border: 1px solid black;
     display: inline-grid;
-    margin-top:4px;
+    margin: 0px 8px 0px 8px;
+    outline: 1px solid black;
 }
 
 .headerGrid {
+    background-color: #EBECF0;
     display: inline-grid;
     grid-gap: 12px;
     grid-template-columns: 2fr 1fr 1fr;
     height: 127px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
 }
 
 .header1 {
     grid-column: 1;
     padding-left: 16px;
+    position: relative;
 }
 
 .header2 {
     grid-column: 3;
+    min-width: 400px;
     position: relative;
     right: 20px;
-    min-width: 400px;
 }
 
 .contactLinksGrid {
@@ -67,39 +77,23 @@ Logo Orange: #FF3B00
     display: inline-grid;
     grid-gap: 12px;
     grid-template-columns: 1fr 1fr 1fr;
-    font: 16px serif;
     position: absolute;
     right: 0;
     width: 175px;
 }
 
-.footerGrid {
-    display: inline-grid;
-    grid-gap: 12px;
-    grid-template-columns: 1fr 1fr 1fr;
-    font: 16px serif;
-    margin: 4px auto;
-}
-
-.footerContentGrid {
-    display: inline-grid;
-    grid-column: 2;
-    grid-gap: 12px;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 20px 24% 0 24%;
-    width: 175px;
-}
-
 .contactFormGrid {
     background-color: white;
-    border-color: black;
-    border-style: solid;
     display: inline-grid;
+    font: 16px 'Open Sans', sans-serif;
     grid-column: 3;
     grid-gap: 12px;
-    grid-template-columns: 10fr 50fr 1fr;
+    grid-template-columns: 12fr 50fr 1fr;
     grid-template-rows: 30px 1fr 25px 30px;
     grid-row: 4;
+    margin: 136px 8px 8px 8px;
+    outline-color: black;
+    outline-style: solid;
 }
 
 .contactFormTitle {
@@ -157,8 +151,15 @@ Logo Orange: #FF3B00
     width:48px;
 }
 
-.headerGrid div * {
-    margin-bottom: 4px;
+.footerContent {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.footerBadges {
+    display: inline-block;
+    height: 32px;
+    width: 96px;
 }
 
 .githubLogo {
@@ -172,13 +173,15 @@ Logo Orange: #FF3B00
 }
 
 .pageTitle {
+    bottom: 0;
     color: #FF3B00;
     font: 64px 'Arizonia', serif;
+    position: absolute;
 }
 
 .values {
     color: #000F4C;
-    font: 32px 'Merienda One', serif;
+    font: 32px 'Open Sans', serif;
     margin: 16px 8px 8px 16px;
     text-align: center;
 }
@@ -201,9 +204,11 @@ a:visited {
 
 body {
     background-color: #EBECF0;
+    margin:0;
 }
 
 button {
+    border-radius: 4px;
     height: 30px;
     width:100px;
 }
@@ -222,29 +227,73 @@ section h4 {
 }
 
 section p {
-    font: 16px serif;
+    font: 16px 'Open Sans', sans-serif;
     margin: 16px;
 }
 
-textarea, input[type=email] {
-    font: 16px serif;
+textarea {
     resize: none;
 }
 
 /* Utilities */
-
-.alwaysFullWidth {
-    width: 100%;
-}
 
 .hidden {
     display: none;
 }
 
 /* Media Queries */
-
-@media (max-width: 630px) {
-    .pageTitle {
-        font-size: 32px;
+@media (max-width: 549px) {
+    .contactFormGrid {
+        font-size: 14px;
     }
+}
+
+@media (max-width: 496px) {
+    .contactFormGrid {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 429px) {
+    .contactLinksGrid {
+        grid-gap: 8px;
+        width: 125px;
+    }
+    .emailIcon {
+        cursor: pointer;
+        height: 40px;
+        width:40px;
+    }
+    .githubLogo {
+        height: 33px;
+        width: 33px;
+    }
+
+    .header2 {
+        min-width: 300px;
+        right: 20px;
+    }
+
+    .linkedinLogo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .pageTitle {
+        font-size: 56px;
+    }
+
+}
+
+@media (max-width: 349px) {
+    .header2 {
+        min-width: 300px;
+        right: 30px;
+    }
+
+    .pageTitle {
+        font-size: 48px;
+    }
+
 }
