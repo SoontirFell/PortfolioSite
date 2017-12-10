@@ -33,20 +33,23 @@
             <h4 id="contactFormTitle" class="contactFormTitle" title="Ok, it's a drop down, but they're more mobile friendly">
                 Start a Dialogue
             </h4>
-            <span id="contactFormX" class="contactFormX">
-                X
-            </span>
-            <label for="sendersMessage" class="sendersMessageLabel">
-                Your Message*
-            </label>
-            <textarea id="sendersMessage" class="sendersMessage" name="sendersMessage"  placeholder="What would you like to discuss?" required="required" maxlength="1024" rows="5"></textarea>
-            <label for="senderEmail" class="senderEmailLabel">
-                Your Email Address*
-            </label>
-            <input id="senderEmail" class="senderEmail" name="senderEmail" placeholder="yourEmail@gmail.com"  required="required" type="email">
-            <button id="sendEmail" class="sendEmail" name="sendEmail" title="Send email" value="sendEmail">
-                Send Email
-            </button>
+            <img id="contactFormX" class="contactFormXIcon" src="/imgs/x_out.png" />
+            <form id="emailFormGrid" class="emailFormGrid">
+                <label for="sendersMessage" class="sendersMessageLabel">
+                    Your Message*
+                </label>
+                <textarea id="sendersMessage" class="sendersMessage" name="sendersMessage"  placeholder="What would you like to discuss?" maxlength="1024" rows="5" required></textarea>
+                <label for="sendersEmail" class="sendersEmailLabel">
+                    Your Email Address*
+                </label>
+                <input id="sendersEmail" class="sendersEmail" name="sendersEmail" placeholder="yourEmail@gmail.com" type="email" required>
+                <div id="sendEmailDiv" class="sendEmailDiv">
+                    <button id="sendEmailButton" class="sendEmailButton" name="sendEmailButton" type="button" value="sendEmail">
+                        Send Email
+                    </button>
+                    <label id="sendEmailStatus" class="sendEmailStatus hidden"></label>
+                </div>
+            </form>
         </div>
         <div id="mainContentGrid" class="mainContentGrid">
             <section id="valueSection" class="valueSection" title="Values">
@@ -64,7 +67,7 @@
             </section>
             <section id="resumeSection" class="resumeSection" title="Resume">
                 <h4>
-                    <a href="/M. Nargi Resume - 20171210.pdf" target="_blank">My Résumé</a>
+                    <a href="/M. Nargi Resume_20171210_website.pdf" target="_blank">My Résumé</a>
                 </h4>
             </section>
             <section id="projectSection" class="projectSection" title="Projects">

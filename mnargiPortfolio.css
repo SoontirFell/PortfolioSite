@@ -85,54 +85,62 @@ Logo Orange: #FF3B00
 .contactFormGrid {
     background-color: white;
     display: inline-grid;
-    font: 16px 'Open Sans', sans-serif;
-    grid-column: 3;
     grid-gap: 12px;
-    grid-template-columns: 12fr 50fr 1fr;
-    grid-template-rows: 30px 1fr 25px 30px;
-    grid-row: 4;
+    grid-template-columns: 50fr 1fr;
     margin: 136px 8px 8px 8px;
     outline-color: black;
     outline-style: solid;
 }
 
 .contactFormTitle {
-    grid-column: span 2;
     grid-row: 1;
     margin: 2px 0px 0px 16px;
 }
 
-.contactFormX {
-    grid-column:3;
+.contactFormXIcon {
+    cursor: pointer;
     grid-row: 1;
-    text-align: right;
+    height: 30px;
     padding-right: 4px;
+    width: 30px;
 }
+
+.emailFormGrid {
+    display: inline-grid;
+    grid-gap: 12px;
+    grid-template-columns: 3fr 7fr;
+}
+
 
 .sendersMessageLabel {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
 }
 
 .sendersMessage {
     grid-column: 2;
+    grid-row: 1;
+}
+
+.sendersEmailLabel {
+    grid-column: 1;
     grid-row: 2;
 }
 
-.senderEmailLabel {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.senderEmail {
+.sendersEmail {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 2;
+    max-height: 1.5em;
     max-width: 256px;
 }
 
-.sendEmail {
+.sendEmailDiv {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 3;
+}
+
+.sendEmailButton {
+    margin-right: 8px;
 }
 
 
@@ -179,6 +187,14 @@ Logo Orange: #FF3B00
     position: absolute;
 }
 
+.statusError {
+    color: rgb(216, 0, 0);
+}
+
+.statusSuccess {
+    color:rgb(0, 216, 0);
+}
+
 .values {
     color: #000F4C;
     font: 32px 'Open Sans', serif;
@@ -209,6 +225,7 @@ body {
 
 button {
     border-radius: 4px;
+    font-family: 'Open Sans';
     height: 30px;
     width:100px;
 }
@@ -222,12 +239,11 @@ h4 {
     font: 24px 'Merienda One', serif;
 }
 
-section h4 {
-    margin: 16px;
+input, label, p, textarea {
+    font: 16px 'Open Sans', sans-serif;
 }
 
-section p {
-    font: 16px 'Open Sans', sans-serif;
+section h4, section p {
     margin: 16px;
 }
 
@@ -243,13 +259,13 @@ textarea {
 
 /* Media Queries */
 @media (max-width: 549px) {
-    .contactFormGrid {
+    input, label, textarea{
         font-size: 14px;
     }
 }
 
 @media (max-width: 496px) {
-    .contactFormGrid {
+    input, label, textarea {
         font-size: 12px;
     }
 }
@@ -297,3 +313,4 @@ textarea {
     }
 
 }
+

@@ -1,10 +1,28 @@
 contactForm = (function () {
     'use strict';
-    var _checkMessage,
+    var _alertStatus,
+        _checkMessage,
+        _clearForm,
         _sendEmail,
-        _sendFailure,
-        _sendSuccessful,
-        _toggleDisplay;
+        _toggleFormDisplay;
+
+    _alertStatus = function (status) {
+        var statusField;
+
+        statusField = document.getElementById('sendEmailStatus');
+
+        if (status === 'success') {
+            statusField.classList.remove('statusError');
+            statusField.classList.add('statusSuccess');
+            statusField.innerHTML = 'Success';
+            setTimeout(_toggleFormDisplay, 2000);
+        } else {
+            statusField.classList.remove('statusSuccess');
+            statusField.classList.add('statusError');
+            statusField.innerHTML = 'Error';
+        }
+        if (statusField.classList.contains('hidden')) statusField.classList.remove('hidden');
+    };
 
     _checkMessage = function () {
         var emailRegex,
@@ -15,7 +33,7 @@ contactForm = (function () {
         emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         error = '';
         messageBody = document.getElementById('sendersMessage').value;
-        returnAddress = document.getElementById('senderEmail').value;
+        returnAddress = document.getElementById('sendersEmail').value;
 
         if (!messageBody) {
             error += 'Please enter a message before sending.'
@@ -24,7 +42,14 @@ contactForm = (function () {
             if (error !== '') error += '\n';
             error += 'Please enter a valid return, email address before sending.';
         }
-        error !== '' ? alert(error) : _sendEmail(messageBody, returnAddress);
+        error !== '' ? console.log(error) : _sendEmail(messageBody, returnAddress);
+    };
+
+    _clearForm = function () {
+        if(document.getElementById('contactFormGrid').classList.contains('slideOut')) {
+            document.getElementById('emailFormGrid').reset();
+            document.getElementById('sendEmailStatus').innerHTML = '';
+        }
     };
 
     _sendEmail = function (messageBody, returnAddress) {
@@ -51,9 +76,9 @@ contactForm = (function () {
         xhr.onreadystatechange = function () {
             if(xhr.readyState === 4 ) {
                 if(xhr.status === 200) {
-                    _sendSuccessful();
+                    _alertStatus('success');
                 } else {
-                    _sendFailure();
+                    _alertStatus('error');
                 }
             }
         }
@@ -61,18 +86,7 @@ contactForm = (function () {
         xhr.send(params);
     };
 
-    _sendFailure = function () {
-        alert('There was an error sending your email. Please check for any errors and try again.');
-    };
-
-    _sendSuccessful = function () {
-        alert('Thank you for your email. I will get back to you as soon as possible.\n\nHave a great day!');
-        _toggleDisplay();
-        document.getElementById('sendersMessage').value = '';
-        document.getElementById('senderEmail').value = '';
-    };
-
-    _toggleDisplay = function () {
+    _toggleFormDisplay = function () {
         var contactFormGrid,
             currentlyHidden;
 
@@ -87,15 +101,17 @@ contactForm = (function () {
         } else {
             contactFormGrid.classList.remove('slideIn');
             contactFormGrid.classList.add('slideOut');
+            setTimeout(_clearForm, 10000);
         }
     };
 
     return {
+        alertStatus: _alertStatus,
         checkMessage: _checkMessage,
-        toggleDisplay: _toggleDisplay
+        toggleFormDisplay: _toggleFormDisplay
     };
 })();
 
-document.getElementById('emailIconHeader').addEventListener('click', contactForm.toggleDisplay);
-document.getElementById('contactFormX').addEventListener('click', contactForm.toggleDisplay);
-document.getElementById('sendEmail').addEventListener('click', contactForm.checkMessage);
+document.getElementById('emailIconHeader').addEventListener('click', contactForm.toggleFormDisplay);
+document.getElementById('contactFormX').addEventListener('click', contactForm.toggleFormDisplay);
+document.getElementById('sendEmailButton').addEventListener('click', contactForm.checkMessage);
