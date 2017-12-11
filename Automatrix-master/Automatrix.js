@@ -343,116 +343,6 @@ function focusTimeOut(focusTarget) {
     }, 0);
 }
 
-//This is ugly and does not work for navigation from a select list to another element on the same page. How can it be cleaner?
-
-function enterNavigation(event) {
-    'use strict';
-
-    if (event.key !== 'Enter') {
-        return;
-    }
-
-    if (document.getElementById('subCalcToggle').checked) {
-        switch (event.target.id) {
-        case 'timeSavedPer':
-            document.getElementById('timeSavedPerMargin').focus();
-            break;
-        case 'timeSavedPerMargin':
-            document.getElementById('timeSavedPerUnits').focus();
-            break;
-        case 'timeSavedPerUnits':
-            switchParam(null, 'eqTaskReps');
-            document.getElementById('taskReps').focus();
-            break;
-        case 'timeWOAutomation':
-            document.getElementById('timeWOAutomationMargin').focus();
-            break;
-        case 'timeWOAutomationMargin':
-            document.getElementById('timeWOAutomationUnits').focus();
-            break;
-        case 'timeWOAutomationUnits':
-            focusTimeOut('timeWAutomation');
-            break;
-        case 'timeWAutomation':
-            document.getElementById('timeWAutomationMargin').focus();
-            break;
-        case 'timeWAutomationMargin':
-            document.getElementById('timeWAutomationUnits').focus();
-            break;
-        case 'timeWAutomationUnits':
-            switchParam(null, 'eqTaskReps');
-            document.getElementById('taskReps').focus();
-            break;
-        case 'taskReps':
-            document.getElementById('taskRepsMargin').focus();
-            break;
-        case 'taskRepsMargin':
-            switchParam(null, 'eqSetupTime');
-            document.getElementById('setupTime').focus();
-            break;
-        case 'taskFrequency':
-            document.getElementById('taskFrequencyMargin').focus();
-            break;
-        case 'taskFrequencyMargin':
-            document.getElementById('taskFrequencyUnits').focus();
-            break;
-        case 'taskFrequencyUnits':
-            focusTimeOut('taskDuration');
-            break;
-        case 'taskDuration':
-            document.getElementById('taskDurationMargin').focus();
-            break;
-        case 'taskDurationMargin':
-            document.getElementById('taskDurationUnits').focus();
-            break;
-        case 'taskDurationUnits':
-            switchParam(null, 'eqSetupTime');
-            document.getElementById('setupTime').focus();
-            break;
-        case 'setupTime':
-            document.getElementById('setupTimeMargin').focus();
-            break;
-        case 'setupTimeMargin':
-            document.getElementById('setupTimeUnits').focus();
-            break;
-        case 'setupTimeUnits':
-            switchParam(null, 'eqTimeSaved');
-            document.getElementById('timeSavedUnits').focus();
-            break;
-        }
-    } else {
-        switch (event.target.id) {
-        case 'timeSavedPer':
-            document.getElementById('timeSavedPerMargin').focus();
-            break;
-        case 'timeSavedPerMargin':
-            document.getElementById('timeSavedPerUnits').focus();
-            break;
-        case 'timeSavedPerUnits':
-            switchParam(null, 'eqTaskReps');
-            document.getElementById('taskReps').focus();
-            break;
-        case 'taskReps':
-            document.getElementById('taskRepsMargin').focus();
-            break;
-        case 'taskRepsMargin':
-            switchParam(null, 'eqSetupTime');
-            document.getElementById('setupTime').focus();
-            break;
-        case 'setupTime':
-            document.getElementById('setupTimeMargin').focus();
-            break;
-        case 'setupTimeMargin':
-            document.getElementById('setupTimeUnits').focus();
-            break;
-        case 'setupTimeUnits':
-            switchParam(null, 'eqTimeSaved');
-            document.getElementById('timeSavedUnits').focus();
-            break;
-        }
-    }
-}
-
 function updateForm(event) {
     'use strict';
     switch (event.target.id) {
@@ -484,7 +374,6 @@ function updateForm(event) {
 
 // Keyup is needed to keep equation up to date and for tab navigaton. Keypress is needed for enter navigation
 
-document.addEventListener('keypress', enterNavigation);
 document.addEventListener('keyup', updateForm);
 document.addEventListener('click', updateForm);
 
