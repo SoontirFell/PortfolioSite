@@ -8,7 +8,7 @@ Logo Orange: #FF3B00
 /* Animations */
 
 .slideIn {
-    max-height: 256px;
+    max-height: 272px;
     outline-width: 1px;
     padding-bottom: 8px;
 }
@@ -51,11 +51,11 @@ Logo Orange: #FF3B00
     background-color: #EBECF0;
     display: inline-grid;
     grid-gap: 12px;
-    grid-template-columns: 2fr 1fr 1fr;
     height: 127px;
     border-bottom: 1px solid black;
     position: fixed;
     top: 0;
+    width: 100%;
     z-index: 9999;
 }
 
@@ -87,14 +87,14 @@ Logo Orange: #FF3B00
     display: inline-grid;
     grid-gap: 12px;
     grid-template-columns: 50fr 1fr;
-    margin: 136px 8px 8px 8px;
+    margin: 140px 8px 8px 8px;
     outline-color: black;
     outline-style: solid;
 }
 
 .contactFormTitle {
     grid-row: 1;
-    margin: 2px 0px 0px 16px;
+    margin: 4px 0px 0px 16px;
 }
 
 .contactFormXIcon {
@@ -258,20 +258,20 @@ textarea {
 }
 
 /* Media Queries */
-@media (max-width: 549px) {
+@media only screen and (max-width: 549px) {
     input, label, textarea{
         font-size: 14px;
     }
 }
 
-@media (max-width: 496px) {
+@media only screen and (max-width: 496px) {
     input, label, textarea {
         font-size: 12px;
     }
 }
 
 
-@media (max-width: 429px) {
+@media only screen and (max-width: 429px) {
     .contactLinksGrid {
         grid-gap: 8px;
         width: 125px;
@@ -302,7 +302,7 @@ textarea {
 
 }
 
-@media (max-width: 349px) {
+@media only screen and (max-width: 349px) {
     .header2 {
         min-width: 300px;
         right: 30px;

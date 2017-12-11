@@ -17,12 +17,9 @@ label {
     display: inline-block;
     font-size: 14px;
     position:relative;
-    width:95px;
+    width:125px;
 }
 
-div {
-    width:300px;
-}
 
 input {
     width:200px;
