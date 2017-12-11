@@ -30,6 +30,8 @@
             
             <div id="formContainer" class="formStyle">
                     <form id="formFilters" class="formFiltersStyle">
+                        <input id="timeUnitConfig" name="timeUnitConfig" type="checkbox">
+                        <label> Configure Units</label>
                         <input id="subCalcToggle" name="subCalcToggle" type="checkbox">
                         <label> Sub-Calculators</label>
                     </form>
@@ -156,6 +158,20 @@
                         </div>
                     </div>       
                 </form>
+            </div>
+            <div id="timUnitsConfigDiv" class="timUnitsConfigDiv hidden">
+                <div id="hoursInDayDiv">
+                    <h5>Hours in a Day</h5>
+                    <input id="hoursInDay" type="number" name="hoursInDay" min="1" max="24" value="24">
+                </div>
+                <div id="daysInaWeekDiv">
+                    <h5>Days in a Week</h5>
+                    <input id="daysInaWeek" type="number" name="daysInaWeek" min="1" max="7" value="7">
+                </div>
+                <div id="weeksInaYearDiv">
+                    <h5>Weeks in a Year</h5>
+                    <input id="weeksInaYear" type="number" name="weeksInaYear" min="1" max="52" value="52">
+                </div>
             </div>
             <br />
             <br />

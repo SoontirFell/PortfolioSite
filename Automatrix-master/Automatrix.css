@@ -16,13 +16,12 @@ h4, h5  {
 label {
     display: inline-block;
     font-size: 14px;
-    left:150px;
     position:relative;
     width:95px;
 }
 
 div {
-    width:500px;
+    width:300px;
 }
 
 input {
@@ -39,7 +38,6 @@ input {
 }
 
 .formStyle {
-    margin-left: 28px;
     width:272px;
 }
 
@@ -50,7 +48,6 @@ input {
 
 .formFiltersStyle input{
     display: inline-block;
-    left:150px;
     margin:0px;
     position:relative;
     vertical-align: middle;

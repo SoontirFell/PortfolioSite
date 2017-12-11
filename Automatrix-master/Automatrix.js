@@ -6,10 +6,12 @@ function convertSeconds(value, units, bToSeconds) {
         'Seconds': 1,
         'Minutes': 60,
         'Hours': 3600,
-        'Days': 86400,
-        'Weeks': 604800,
-        'Years': 31536000
     };
+
+conversionMap.Days = conversionMap.Hours * document.getElementById('hoursInDay').value;
+conversionMap.Weeks = conversionMap.Days* document.getElementById('daysInaWeek').value;
+conversionMap.Years = conversionMap.Weeks * document.getElementById('weeksInaYear').value;
+
     if (typeof value !== 'undefined' && typeof units !== 'undefined' && typeof bToSeconds !== 'undefined') {
         if (!!conversionMap[units]) {
             if (bToSeconds) {
@@ -68,6 +70,19 @@ function subCalcToggle() {
         for (i = 0; i < subCalcsLen; i++) {
             subCalcs[i].classList.add('hidden');
         }
+    }
+}
+
+function timeConfigToggle() {
+    'use strict';
+    var timeUnitConfig;
+
+    timeUnitConfig = document.getElementById('timUnitsConfigDiv');
+
+    if (document.getElementById('timeUnitConfig').checked) {
+        timeUnitConfig.classList.remove('hidden');
+    } else {
+        timeUnitConfig.classList.add('hidden');
     }
 }
 
@@ -483,3 +498,4 @@ document.getElementById('timeWOAutomationUnits').addEventListener('change', upda
 
 document.getElementById('eqContainer').addEventListener('click', switchParam);
 document.getElementById('subCalcToggle').addEventListener('click', subCalcToggle);
+document.getElementById('timeUnitConfig').addEventListener('click', timeConfigToggle);
