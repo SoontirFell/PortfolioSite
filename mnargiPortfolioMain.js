@@ -115,3 +115,5 @@ contactForm = (function () {
 document.getElementById('emailIconHeader').addEventListener('click', contactForm.toggleFormDisplay);
 document.getElementById('contactFormX').addEventListener('click', contactForm.toggleFormDisplay);
 document.getElementById('sendEmailButton').addEventListener('click', contactForm.checkMessage);
+
+(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)

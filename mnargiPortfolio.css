@@ -260,6 +260,17 @@ textarea {
     display: none;
 }
 
+.js {
+    visibility: visible;
+    opacity: 1;
+   }
+
+.no-js {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
 /* Media Queries */
 @media only screen and (max-width: 549px) {
     .emailFormGrid {
