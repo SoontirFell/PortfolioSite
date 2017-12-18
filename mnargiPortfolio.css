@@ -19,7 +19,6 @@ Logo Orange: #FF3B00
 }
 
 .slideIn, .slideOut {
-    overflow-y: hidden;
     transition: max-height 0.4s ease-in-out, outline-width 0.4s ease-in-out;
 }
 
@@ -43,7 +42,6 @@ Logo Orange: #FF3B00
 .mainContentGrid {
     background-color: white;
     display: inline-grid;
-    margin: 0px 8px 0px 8px;
     outline: 1px solid black;
 }
 
@@ -86,10 +84,12 @@ Logo Orange: #FF3B00
     background-color: white;
     display: inline-grid;
     grid-gap: 12px;
-    grid-template-columns: 50fr 1fr;
-    margin: 140px 8px 8px 8px;
+    grid-template-columns: 1fr 30px;
+    margin-bottom: 8px;
     outline-color: black;
     outline-style: solid;
+    overflow: hidden;
+    width: 100%
 }
 
 .contactFormTitle {
@@ -108,9 +108,8 @@ Logo Orange: #FF3B00
 .emailFormGrid {
     display: inline-grid;
     grid-gap: 12px;
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 200px 1fr;
 }
-
 
 .sendersMessageLabel {
     grid-column: 1;
@@ -195,6 +194,10 @@ Logo Orange: #FF3B00
     color:rgb(0, 216, 0);
 }
 
+.subHeaderContainer {
+    margin: 140px 8px 0px 8px;
+}
+
 .values {
     color: #000F4C;
     font: 32px 'Open Sans', serif;
@@ -259,19 +262,49 @@ textarea {
 
 /* Media Queries */
 @media only screen and (max-width: 549px) {
+    .emailFormGrid {
+        grid-template-columns: 150px 1fr;
+    }
+    
     input, label, textarea{
         font-size: 14px;
+    }
+
+    .contactFormGrid label {
+        margin-left: 8px;
     }
 }
 
 @media only screen and (max-width: 496px) {
+    .emailFormGrid {
+        grid-template-columns: 130px 1fr;
+    }
+    
     input, label, textarea {
         font-size: 12px;
+    }
+
+    .contactFormGrid label {
+        margin-left: 8px;
     }
 }
 
 
 @media only screen and (max-width: 429px) {
+    .contactFormGrid {
+        display: inline-block;
+        grid-template-columns: none;
+    }
+
+    .contactFormTitle {
+        display: inline-block;
+        width: 200px;
+    }
+
+    .contactFormXIcon {
+        float: right;
+    }
+    
     .contactLinksGrid {
         grid-gap: 8px;
         width: 125px;
