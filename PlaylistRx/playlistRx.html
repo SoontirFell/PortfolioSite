@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport"  />
+        
+        <title>PlaylistRx</title>
+        <link href="playlistRx.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div id="container">
+            <h1 id="headline" class="headline">Playlist<span id="headlineRx">Rx</span></h1>
+
+            <div id ="saveDiv">
+                <p id="directionsMain">
+                    PlaylistRx creates Spotify and YouTube playlists based on the links you've saved to your Reddit account.
+                </p>
+
+                <div id="actionPanel">
+                    <div id="accountToggles" class="">
+                        <label>Include:</label>
+                        <input id="checkSpotify" name="checkSpotify" type="checkbox" checked>
+                        <label>Spotify</label>
+                        <input id="checkYouTube" name="checkYouTube" type="checkbox" checked>
+                        <label>YouTube</label>
+                    </div>
+                    <br>
+                    <div id="playlistRx" class="button" name="playlistRx" type="button" >Get my Reddit Saved</div>
+
+                    <br>
+                    <br>
+
+                    <table id="playlistCreator" class="playlistCreator ">
+                        <tr id="tableHeader" class="tableHeader">
+                            <th>
+                                <input id="checkAll" type="checkbox" name="checkAll" checked>
+                            </th>
+                            <th >
+                                <label id="playlistName"><input id="playlistNameInput" type="text" name="playlistName" placeholder="Enter Playlist Name" class=""></label>
+                            </th>
+                            <th>
+                                <div id="saveSelected" class="smallButton">Save</div>
+                            </th>
+                            <th>
+                                <div id="unsaveSelected" class="smallButton">Unsave</div>
+                            </th>
+                        </tr>
+                        <tr id="spotifySubheader" class="tableSubheader">
+                            <th>
+                                <input id="spotifyCheckAll" type="checkbox" name="spotifyCheckAll" checked>
+                            </th>
+                            <th colspan="3">
+                                <label id="spotifyLabel">Spotify</label>
+                            </th>
+                        </tr>
+                        <tr id="youtubeSubheader" class="tableSubheader">
+                            <th>
+                                <input id="youtubeCheckAll" type="checkbox" name="youtubeCheckAll" checked>
+                            </th>
+                            <th colspan="3">
+                                <label id="youtubeLabel">YouTube</label>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="playlistRx.js" ></script>
+    </body>
+</html>

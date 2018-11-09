@@ -1,0 +1,101 @@
+/* Colors 
+http://www.colorexplorer.com/colormatch.aspx
+Primary Green: #0ECE00
+Off-Black: #010400
+Dark Green: #098200
+Dark Gray: #303030
+Off-White: #CFCFCF
+*/
+
+/* Ids */
+
+/* Tags */
+a {
+    color: #CFCFCF;
+    
+}
+
+body {
+    background-color: #010400;
+    color: ghostwhite;
+}
+
+label {
+    font-size: 18px;
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 750px;
+    min-width: 315px;
+    width:750px;
+}
+
+th {
+    border-bottom: #CFCFCF solid 2px;
+}
+
+
+th:nth-child(1) {
+    width: 10px;
+}
+
+th:nth-child(2), th:nth-child(4) {
+    text-align: left;
+}
+
+th:nth-child(3) {
+    text-align: right;
+}
+
+th:nth-child(3), th:nth-child(4) {
+    width: 75px;
+}
+
+
+
+/* Classes */
+
+.button {
+    background-color: #098200;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+    text-shadow: black 0px 0px 2px;
+    width:150px
+}
+
+.headline {
+    color:#0ECE00;
+    font-family: Georgia, Times New Roman, serif;
+    font-style: italic;
+    text-shadow: black 1px 1px 2px
+}
+
+
+.smallButton {
+    background-color: #098200;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+    text-shadow: black 0px 0px 2px;
+    width: 75px;
+}
+
+.red {
+    color: red;
+}
+
+/* Utilities */
+.inlineBlock {
+    display: inline-block;
+}
+
+.hidden {
+	display: none;
+}
+

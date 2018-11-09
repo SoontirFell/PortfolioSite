@@ -1,0 +1,61 @@
+To Do
+    Allow playlist links to import
+        playlistYT
+        playlistSY
+            Extract user from URL
+            Request tracks
+    Allow import via URL
+    Style
+        Loading indicator
+        Sticky headers
+        Content scaling for multiple devices
+        Convert alert to dialog
+    Integrate Google AdSense
+    ---Post to Site---
+    Use at least 5 times consecutively without error
+    ---Post on Reddit---
+    Refactor
+        Implement React
+        Convert vars and lets to consts
+    Scan Page for music (e.g. Beaport)
+        Look for class tags like title and artist grouped under the same parent
+        Store combinations of title and artist in an array
+        Choose to search YouTube, Spotify, or both
+        Show search results w/ artist, title, and source
+    Implement React Native for mobile
+    ---
+    Create SoundCloud playlists - Requires SC to allow new app registration
+
+
+---
+YouTube API
+
+https://developers.google.com/youtube/v3/guides/auth/client-side-web-apps
+https://developers.google.com/youtube/v3/docs/playlists/insert
+https://developers.google.com/youtube/v3/docs/videos/list
+http://www.htmlgoodies.com/beyond/video/respond-to-embedded-youtube-video-events.html
+http://stackoverflow.com/questions/22726941/youtube-api-get-current-video-title
+http://stackoverflow.com/questions/28018792/how-to-get-youtube-video-title-with-v3-url-api-in-javascript-w-ajax-json
+http://stackoverflow.com/questions/30084140/youtube-video-title-with-api-v3-without-api-key
+
+---
+SY API
+https://developer.spotify.com/web-api/authorization-guide/
+https://developer.spotify.com/web-api/get-current-users-profile/
+https://developer.spotify.com/web-api/create-playlist/
+https://developer.spotify.com/web-api/add-tracks-to-playlist/
+https://developer.spotify.com/web-api/get-albums-tracks/
+https://beta.developer.spotify.com/documentation/web-api/reference/playlists/get-playlists-tracks/
+
+---
+SC API
+https://developers.soundcloud.com/docs/api/reference#tracks
+https://developers.soundcloud.com/docs/api/html5-widget
+https://github.com/soundcloud/soundcloud-javascript
+https://github.com/APIADay/SoundCloud/blob/master/artdio-gmemstr/index.html
+
+
+---
+Reddit API
+https://www.reddit.com/dev/api/
+https://github.com/reddit-archive/reddit/wiki/OAuth2
